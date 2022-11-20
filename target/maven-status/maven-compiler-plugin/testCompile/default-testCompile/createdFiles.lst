@@ -1,0 +1,5 @@
+utils\utils_task.class
+utils\ElementActions.class
+pageObjects\ProductPage.class
+Envpage\BaseEnv.class
+testCases\Test_ProductPage.class

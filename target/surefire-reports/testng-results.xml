@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="testCases.Test_ProductPage" duration-ms="63740" started-at="2022-11-20T15:39:29 BDT" finished-at="2022-11-20T15:40:33 BDT">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="63740" started-at="2022-11-20T15:39:29 BDT" finished-at="2022-11-20T15:40:33 BDT">
+      <class name="testCases.Test_ProductPage">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testCases.Test_ProductPage@32eff876]" name="setup" is-config="true" duration-ms="4540" started-at="2022-11-20T15:39:29 BDT" finished-at="2022-11-20T15:39:34 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test_product_title_text()[pri:1, instance:testCases.Test_ProductPage@32eff876]" name="test_product_title_text" duration-ms="20624" started-at="2022-11-20T15:39:34 BDT" finished-at="2022-11-20T15:39:55 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_product_title_text -->
+        <test-method status="PASS" signature="screenShot(org.testng.ITestResult)[pri:0, instance:testCases.Test_ProductPage@32eff876]" name="screenShot" is-config="true" duration-ms="16419" started-at="2022-11-20T15:39:55 BDT" finished-at="2022-11-20T15:40:11 BDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_product_title_text status=SUCCESS method=Test_ProductPage.test_product_title_text()[pri:1, instance:testCases.Test_ProductPage@32eff876] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenShot -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:testCases.Test_ProductPage@32eff876]" name="setup" is-config="true" duration-ms="1855" started-at="2022-11-20T15:40:11 BDT" finished-at="2022-11-20T15:40:13 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test_login()[pri:2, instance:testCases.Test_ProductPage@32eff876]" name="test_login" duration-ms="19728" started-at="2022-11-20T15:40:13 BDT" finished-at="2022-11-20T15:40:33 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_login -->
+        <test-method status="PASS" signature="screenShot(org.testng.ITestResult)[pri:0, instance:testCases.Test_ProductPage@32eff876]" name="screenShot" is-config="true" duration-ms="215" started-at="2022-11-20T15:40:33 BDT" finished-at="2022-11-20T15:40:33 BDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_login status=SUCCESS method=Test_ProductPage.test_login()[pri:2, instance:testCases.Test_ProductPage@32eff876] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenShot -->
+      </class> <!-- testCases.Test_ProductPage -->
+    </test> <!-- Command line test -->
+  </suite> <!-- testCases.Test_ProductPage -->
+</testng-results>
