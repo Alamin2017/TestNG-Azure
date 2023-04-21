@@ -37,12 +37,12 @@ public class ElementActions {
         return getElement(locator).getText();
     }
     public boolean doDisplayed(By locator) throws InterruptedException {
-        Thread.sleep(2000);
         return getElement(locator).isDisplayed();
     }
     public void doEnterValue(By locator,String value) throws InterruptedException {
-        Thread.sleep(2000);
         getElement(locator).sendKeys(value);
+        Thread.sleep(2000);
     }
+
 
 }

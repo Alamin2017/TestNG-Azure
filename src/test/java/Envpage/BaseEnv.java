@@ -9,12 +9,13 @@ import org.testng.annotations.BeforeMethod;
 import utils.utils_task;
 import java.time.Duration;
 public class BaseEnv {
-    public WebDriver driver;
+    public static WebDriver driver;
     @BeforeMethod
     public void setup()
     {
         ChromeOptions ops = new ChromeOptions();
         ops.addArguments("--disable-notifications");
+        ops.addArguments("--remote-allow-origins=*");
         WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver(ops);
         driver.manage().window().maximize();
@@ -23,7 +24,7 @@ public class BaseEnv {
     }
     @AfterMethod
     public void screenShot(ITestResult result){
-        if(ITestResult.FAILURE==result.getStatus()){
+        if(ITestResult.FAILURE==result.getStatus()) {
             try{
                 utils_task utils=new utils_task(driver);
                 utils.takeScreenshotForFailure(driver);
@@ -32,7 +33,7 @@ public class BaseEnv {
                 System.out.println(exception.toString());
             }
         }
-        else{
+        else {
             try{
                 utils_task utils=new utils_task(driver);
                 utils.takeScreenshotForSuccess(driver);

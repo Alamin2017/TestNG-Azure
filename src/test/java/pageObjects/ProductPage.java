@@ -6,7 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import utils.ElementActions;
 
-public class ProductPage {
+import java.util.List;
+
+public class ProductPage  {
     public WebDriver driver;
     public ProductPage(WebDriver driver)
     {
@@ -44,7 +46,10 @@ public class ProductPage {
         ElementActions ele=new ElementActions(driver);
         ele.doEnterValue(username,value);
     }
-
-
-
+    By all_product_info=By.xpath("//*[@id=\"content\"]/section/div/article/div");
+    public List<WebElement> Multiple_product_List()
+    {
+        ElementActions ele=new ElementActions(driver);
+        return ele.getElements(all_product_info);
+    }
 }

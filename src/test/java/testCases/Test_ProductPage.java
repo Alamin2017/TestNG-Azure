@@ -9,6 +9,7 @@ public class Test_ProductPage extends BaseEnv {
     @Test(priority = 1)
     public void test_product_title_text() throws InterruptedException
     {
+
         driver.get("http://teststore.automationtesting.co.uk/");
         Thread.sleep(5000);
         pp=new ProductPage(driver);
@@ -36,4 +37,20 @@ public class Test_ProductPage extends BaseEnv {
         Thread.sleep(5000);
 
     }
+    @Test(priority = 3)
+    public void test_all_product_count() throws InterruptedException
+    {
+        driver.get("http://teststore.automationtesting.co.uk/");
+        Thread.sleep(5000);
+        pp=new ProductPage(driver);
+        int product_count=pp.Multiple_product_List().size();
+        for (int i=0;i<product_count;i++)
+        {
+            System.out.println("Product["+(i+1)+"]:"+pp.Multiple_product_List().get(i).getText());
+        }
+        System.out.println("ALl Product:"+product_count);
+        Assert.assertEquals(8,product_count);
+
+    }
+
 }

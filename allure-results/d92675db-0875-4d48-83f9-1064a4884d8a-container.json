@@ -1,0 +1,1 @@
+{"uuid":"d92675db-0875-4d48-83f9-1064a4884d8a","name":"Envpage.BaseEnv.screenShot","children":["cc25300b-2f6e-4228-aa65-e064e3825084"],"description":"","befores":[],"afters":[{"name":"screenShot","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1679241158864,"stop":1679241159097}],"start":1679241158863,"stop":1679241159097}
