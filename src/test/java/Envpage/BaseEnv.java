@@ -1,8 +1,6 @@
 package Envpage;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -13,30 +11,32 @@ public class BaseEnv {
     @BeforeMethod
     public void setup()
     {
-        ChromeOptions ops = new ChromeOptions();
-        ops.addArguments("--disable-notifications");
-        ops.addArguments("--remote-allow-origins=*");
-        WebDriverManager.chromedriver().setup();
-        driver=new ChromeDriver(ops);
+
+        driver=new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
     }
     @AfterMethod
     public void screenShot(ITestResult result){
+        String testName=result.getName();
         if(ITestResult.FAILURE==result.getStatus()) {
-            try{
+            try
+            {
                 utils_task utils=new utils_task(driver);
-                utils.takeScreenshotForFailure(driver);
+                utils.takeScreenshotForFailure(driver,testName);
             }
-            catch (Exception exception){
+            catch (Exception exception)
+            {
                 System.out.println(exception.toString());
             }
         }
-        else {
-            try{
+        else
+        {
+            try
+            {
                 utils_task utils=new utils_task(driver);
-                utils.takeScreenshotForSuccess(driver);
+                utils.takeScreenshotForSuccess(driver,testName);
             }
             catch (Exception exception){
                 System.out.println(exception.toString());
